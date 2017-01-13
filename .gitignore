@@ -1,0 +1,14 @@
+#Ignoring system files
+.DS_Store
+
+#Ignoring MS Offise support files
+*.xslx
+*.docx
+*.doc
+
+#Ignoring tex auxiliary and output files
+*.aux
+*.out
+*.gz
+*.bak
+*.log
