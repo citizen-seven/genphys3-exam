@@ -6,7 +6,7 @@
 \RequirePackage[T2A, T1]{fontenc}
 \RequirePackage[utf8]{inputenc}
 \RequirePackage[english, russian]{babel}
-\RequirePackage{inputx}
+\RequirePackage{iunits}
 
 % Беспредел
 \let\NOLIMITS\nolimits
@@ -61,6 +61,3 @@
 \newcommand{\const}{\text{const}}
 \newcommand{\then}{\quad\Rightarrow\quad}
 \newcommand{\ef}{\mathscr{E}}
-
-
-\input{units.cls}
