@@ -2,7 +2,7 @@
 .DS_Store
 
 #Ignoring MS Offise support files
-*.xslx
+*.xlsx
 *.docx
 *.doc
 
@@ -12,3 +12,6 @@
 *.gz
 *.bak
 *.log
+
+#MagicPlot project
+*.mppz

@@ -16,9 +16,9 @@
 \RequirePackage{amsmath}
 \RequirePackage{amsfonts}
 \RequirePackage{amssymb}
+\RequirePackage{bigints}
 \RequirePackage{cancel}
 \RequirePackage{mathrsfs}
-\RequirePackage[integrals]{wasysym}
 
 % Разметка
 \RequirePackage [hcentering,
