@@ -81,107 +81,69 @@ $$ \alpha_1 \equiv \varphi_1 + \varphi_2, \quad
 
 С учётом $B_1 \simeq \dfrac{\mu_0 p_m}{r^3}$ получаем в приближении слабой связи $\omega_b \propto r^{-3}$.
 
-\subsection{Поле магнитной стрелки при сильной связи}
+\subsection{Сильная связь}
 
-Магнитные стрелки будем рассматривать как магнитные диполи. 
+Магнитные стрелки предствляют собой магнитные диполи:
+\begin{equation}
+\vec{B} = \dfrac{\mu_0}{4 \pi} \left(\dfrac{3(\vec{p_m} \cdot\vec{r}) \cdot \vec{r}}{r^5} - \dfrac{\vec p_m}{r^3}\right).
+\end{equation}
 
-Поле диполя:
-
-$$\vec{B} = \dfrac{\mu_0}{4 \pi} \left(\dfrac{3(\vec{p_m} \cdot\vec{r}) \cdot \vec{r}}{r^5} - \dfrac{\vec p_m}{r^3}\right)$$
-
-Задача плоская, поэтому: $\vec p_m (0, 0, p_m) \; , \vec r (x, 0, z-z')$. Здесь поле в точке $(x, 0, z)$, которое создается магнитным моментом в точке $(0,0,z')$.
-
-
-
-Разбиваем стрелку на элементарные диполи: $dp_m = \dfrac{p_m}{l} dz',$ где $l$ - длина этой стрелки.
-
-Тогда поле элемента стрелки равно:
+Поскольку задача плоская, введём такие координаты, что $\vec p_m (0, 0, p_m), \; \vec r (x, 0, z-z')$, и разобьём стрелку на элементарные диполи: $dp_m = p_m \, dz'/l,$ где $l$~--- длина стрелки.
 
 \begin{equation}
 d \vec{B} = \dfrac{\mu_0}{4 \pi}
 	\left(
-		\dfrac{3 \cdot 
-			\left(dp_m \cdot (z-z') \right) 
-			\cdot 
+		\dfrac{3 \cdot
+			\left(dp_m \cdot (z-z') \right)
+			\cdot
 			\left( \vec{i} \cdot x + \vec{k} \cdot (z-z') \right)
 		}{r^5}
-	- \dfrac{\vec{k} \cdot dp_m}{r^3} 
-	\right)
+	- \dfrac{\vec{k} \cdot dp_m}{r^3}
+	\right).
 \end{equation}
 
-Выделим две компоненты: $dB_x$ и $dB_z$ и проинтегрируем их по всем элементам. 
-
+Выделим компоненты $dB_x$ и $dB_z$ и проинтегрируем их:
 %B_x
-\begin{equation}
+\begin{equation*}
 \begin{split}
-B_x = \dfrac{\mu_0}{4 \pi} \bigintsss_{-\frac{l}{2}}^{\frac{l}{2}}
-	\left(
-		\dfrac{3 \cdot (z-z') \cdot x}
+B_x &= \dfrac{\mu_0}{4 \pi} \dfrac{p_m}{l} \bigintsss_{-l/2}^{+l/2}
+		\dfrac{3 \cdot (z-z') \cdot x \cdot dz'}
 		{\left(x^2 + (z-z')^2 \right)^{\frac{5}{2}}}
-	\right)&
-	\dfrac{p_m}{l} dz' =
-	\cdots = \\
-	& = \dfrac{\mu_0}{4 \pi}
+	= \dfrac{\mu_0}{4 \pi}
 	\dfrac{x \cdot p_m}{l}
 	\left(
-		\dfrac{1}{\left(x^2 + (z-\frac{l}{2})^2 \right)^{\frac{3}{2}}} - 
-		\dfrac{1}{\left(x^2 + (z+\frac{l}{2})^2 \right)^{\frac{3}{2}}} 
-	\right)
-\end{split}
-\end{equation}
-
-%B_z
-\begin{equation}
-\begin{split}
-B_z = \dfrac{\mu_0}{4 \pi} \dfrac{p_m}{l}
-\left(
-	\bigintsss_{-\frac{l}{2}}^{\frac{l}{2}}
+		\frac{1}{\left(x^2 + \left(z-\frac{l}{2}\right)^2 \right)^{\frac{3}{2}}} -
+		\frac{1}{\left(x^2 + \left(z+\frac{l}{2}\right)^2 \right)^{\frac{3}{2}}}
+	\right);
+\\
+B_z &= \dfrac{\mu_0}{4 \pi} \dfrac{p_m}{l}
+\left( \;
+	\bigintsss_{-l/2}^{+l/2}
 	\dfrac{3 \cdot (z-z')^2 \cdot dz'}
-	{\left(x^2 + (z-z')^2 \right)^{\frac{5}{2}}} - 
-	 \bigintsss_{-\frac{l}{2}}^{\frac{l}{2}}
-	\dfrac{dz'} 
+	{\left(x^2 + (z-z')^2 \right)^{\frac{5}{2}}} -
+	 \bigintsss_{-l/2}^{+l/2}
+	\dfrac{dz'}
 	{\left(x^2 + (z-z')^2 \right)^{\frac{3}{2}}}
-\right) =
-	\cdots = \\ 
-	  = \dfrac{\mu_0}{4 \pi} \dfrac{p_m}{lx^2}
-\left(
+\right) = \dfrac{\mu_0}{4 \pi} \dfrac{p_m}{lx^2}
 	\dfrac{\left(z+\frac{l}{2}\right)^3}
-	{\left(\left(z+\frac{l}{2}\right)^2 + x^2 \right)^{\frac{3}{2}}}
-\right)
+	{\left(\left(z+\frac{l}{2}\right)^2 + x^2 \right)^{\frac{3}{2}}}.
 \end{split}
-\end{equation}
+\end{equation*}
 
-Для второй стрелки с учетом малости углов отклонения элементарный дипольный момент можно положить равным:
-$$dp_m \approx \dfrac{p_m}{l} dz$$
-
-Тогда вращательный момент, действующей со стороны первой стрелки на элемент второй стрелки:
-
+Для второй стрелки с учетом малости углов отклонения элементарный дипольный момент можно положить равным $dp_m = p_m \,dz/l$, тогда
 \begin{equation}
-d \vec{M} = \left[ d \vec{p_m} , \vec{B}  \right] = \vec{k} (dp_{mx} \cdot B_z - dp_{mz} \cdot B_x)
+d \vec{M} = \left[ d \vec{p}_m, \vec{B} \right] = \vec{k} \, (dp_{mx} \cdot B_z - dp_{mz} \cdot B_x).
 \end{equation}
+Выражения в скобках упрощаются: $ dp_{mx} \cdot B_z \approx \dfrac{p_m \cdot \varphi}{l} \cdot B_z \,dz, \; dp_{mz} \cdot B_x \approx \dfrac{p_m}{l} \cdot B_x \,dz $;
 
-$$dp_{mx} \cdot B_z = dp_m \cdot B_z \cdot \sin \varphi \approx \dfrac{p_m \cdot \varphi}{l} \cdot B_z dz$$
+$$ \int_{-l/2}^{+l/2} B_z \,dz = \dfrac{\mu_0}{2\pi} \dfrac{p_m}{x^2}, \quad
+\int_{-l/2}^{+l/2} B_x \,dz = 0 \quad \Rightarrow \quad
+M \approx \dfrac{\mu_0}{2\pi} \dfrac{p_m^2}{lx^2} \,\varphi. $$
 
-$$dp_{mz} \cdot B_x = dp_m \cdot B_x \cdot \cos \varphi \approx \dfrac{p_m}{l} \cdot B_x dz$$
-
-Вычислим интегралы:
-
-\begin{equation}
-\int_{-\frac{l}{2}}^{\frac{l}{2}} B_z dz = \cdots = \dfrac{\mu_0 \cdot p_m}{2 \pi \cdot x^2}
-\end{equation}
-
-\begin{equation}
-\int_{-\frac{l}{2}}^{\frac{l}{2}} B_x dz = 0
-\end{equation}
-
-Тогда вращательный момент будет:
-\begin{equation}
-M \approx \dfrac{\mu_0 \cdot p_m^2}{2 \pi \cdot lx^2} \cdot \varphi
-\end{equation}
-
-То есть $\omega_\text{б} \sim \dfrac{1}{r}$ при условии наличия сильной связи между магнитными стрелками.
+Следовательно, при наличии сильной связи $\omega_b \propto \sqrt{M} \propto r^{-1}$.
 
 
+\clearpage
 \section{Эксперимент}
 Подвесим две стрелки на нитях на различных расстояниях $r$. Будем выводить одну из стрелок из равновесия, придерживая другую. Замерим $n$ биений за некоторое время $t$. Найдем период биений $T_\text{б} = \frac{t}{n}$.
 
