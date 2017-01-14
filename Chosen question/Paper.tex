@@ -33,68 +33,53 @@
 \begin{equation}
 \mathfrak{I} \cdot \vec{\varepsilon} = \vec{M},
 \end{equation}
-где $\mathfrak{I}$ - момент инерции стрелки относительно центра масс, $M$ - момент внешних сил.
-
+где $\mathfrak{I}$~--- момент инерции стрелки относительно центра масс, $\varepsilon$~--- её угловое ускорение, $M$~--- момент действующих на неё внешних сил:
 \begin{equation}
-M = \left[ \vec{p_m}, \vec{B} \right],
+\vec{M} = \left[ \vec{p}_m, \vec{B} \right],
 \end{equation}
-где $\vec{p_m} = \vec{I} \cdot V$ - магнитный момент, который зависит от намагниченности $I$ и объема $V$ стрелки, $B$ - вектор магнитной индукции внешнего поля (горизонтальная компонента магнитного поля Земли)
+где $\vec{p}_m$~--- магнитный момент стрелки, $\vec{B}$~--- вектор магнитной индукции внешнего поля.
 
-Для малых углов $\varphi$ отклонения:
-
+При малых углах отклонения $\varphi$ стрелки от положения равновесия момент, вызванный горизонтальной компонентой магнитного поля Земли, есть
 \begin{equation}
-M = - p_m \cdot B \cdot \sin \varphi \approx - p_m \cdot B \cdot \varphi
+M = - p_m \cdot B \cdot \sin \varphi \approx - p_m \cdot B \cdot \varphi;
 \end{equation}
-
-Дополнительный момент сил:
+взаимодействие с соседней стрелкой (поле $\vec{B}_1$) вносит вклад
 \begin{equation}
-M_1 = p_m \cdot B_1 \cdot (\varphi_2 - \varphi_1),
-\end{equation}
-где $\vec{B_1}$ - вектор магнитной индукции, созданной второй стрелкой.
-
-Так как стрелки одинаковы, то $p_m$ и $\mathfrak{I}$ для них будем считать равными. При таких условиях запишем уравнения движения обеих стрелок.
-
-\begin{equation}
-\begin{gathered}
-\mathfrak{I} \ddot{\varphi_1} + p_m B \varphi_1 - p_m B_1 (\varphi_2 - \varphi_1) = 0, \\
-\mathfrak{I} \ddot{\varphi_2} + p_m B \varphi_2 - p_m B_1 (\varphi_1 - \varphi_2) = 0.
-\end{gathered}
+M_1 = p_m \cdot B_1 \cdot (\varphi_2 - \varphi_1).
 \end{equation}
 
-
-Сложим и вычтем уравнения, введем замену: $\alpha_1 = \varphi_1 + \varphi_2, \; \alpha_2 = \varphi_1 - \varphi_2$, получим
-
+Так как стрелки одинаковы, $p_m$ и $\mathfrak{I}$ для них будем считать равными. Запишем уравнения движения обеих стрелок:
 \begin{equation}
-\begin{gathered}
-\ddot{\alpha_1} + \omega_1 \alpha_1 = 0, \\
-\ddot{\alpha_2} + \omega_2 \alpha_2 = 0,
-\end{gathered}
+\begin{cases}
+\mathfrak{I} \ddot{\varphi}_1 + p_m B \varphi_1 - p_m B_1 (\varphi_2 - \varphi_1) = 0, \\
+\mathfrak{I} \ddot{\varphi}_2 + p_m B \varphi_2 - p_m B_1 (\varphi_1 - \varphi_2) = 0
+\end{cases}
+\quad \Rightarrow \quad
+\begin{cases}
+\ddot{\alpha}_1 + \omega_1 \alpha_1 = 0; \\
+\ddot{\alpha}_2 + \omega_2 \alpha_2 = 0,
+\end{cases}
 \end{equation}
 
-где $\omega_1 = \sqrt{\dfrac{p_m B}{\mathfrak{I}}}, \; \omega_2 = \sqrt{\dfrac{p_m B}{\mathfrak{I}} + 2\dfrac{p_m B_1}{\mathfrak{I}}} = \sqrt{\dfrac{p_m(B+2B_1)}{\mathfrak{I}}}$
+где после сложения и вычитания уравнений исходной системы введены замены
+$$ \alpha_1 \equiv \varphi_1 + \varphi_2, \quad
+\alpha_2 \equiv \varphi_1 - \varphi_2, \quad
+\omega_1 \equiv \sqrt{\dfrac{p_m B}{\mathfrak{I}}}, \quad
+\omega_2 \equiv \sqrt{\dfrac{p_m(B+2B_1)}{\mathfrak{I}}}. $$
 
-В общем случае колебания такого магнитного маятника состоят из двух независимых колебаний с частотами $\omega_1$ и $\omega_2$, определяемые уравнениями выше и называются нормальными частотами. 
+Таким образом, колебания складываются из двух (независимых) нормальных мод $\omega_1$ и $\omega_2$, причём синфазные колебания соответствуют моде $\omega_1$, противофазные~--- моде $\omega_2$.
 
-Если стрелки отклонять в одном и том же направлении на один угол, они колеблются синхронно с частотой $\omega_1$. Если же стрелки отклонить на одинаковый угол от положения равновесия в разных направлениях, тогда колебания происходят с частотой $\omega_2$.
-
-В произвольном же случае колебаний происходят сложные колебания каждого из маятников, природа которых объясняется наличием связей.
-Если считать, что $B_1 \ll B$, то есть стрелки удалены на достаточное расстояние, то можно найти связь между $\omega_1$ и $\omega_2$ ($\sqrt{1+x} \approx 1 + \dfrac{x}{2}$).
-
+В общем случае происходят сложные колебания каждой из стрелок, природа которых объясняется наличием связи. Если считать, что $B_1 \ll B$ \emph{(связь слабая, стрелки существенно удалены друг от друга),} можно найти связь между $\omega_1$ и $\omega_2$:
 \begin{equation}
-\omega_2 = \sqrt{\dfrac{p_m(B+2B_1)}{\mathfrak{I}}} = \sqrt{\dfrac{p_m B}{\mathfrak{I}}} \cdot \sqrt{1+\dfrac{2B_1}{B}} \approx \omega_1(1+\dfrac{B_1}{B})
+\omega_2 = \sqrt{\dfrac{p_m(B+2B_1)}{\mathfrak{I}}} = \sqrt{\dfrac{p_m B}{\mathfrak{I}}} \cdot \sqrt{1+\dfrac{2B_1}{B}} \approx \omega_1 \left( 1+\dfrac{B_1}{B} \right).
 \end{equation}
 
-Если разность между $\omega_1$ и $\omega_2$ невелика по сравнению с самими величинами, мы видим периодическое увеличение и уменьшение амплитуды колебаний маятников. Такое явление называется биением. Их частота определяется:
-
+Если разность между $\omega_1$ и $\omega_2$ невелика по сравнению с самими величинами, мы видим периодическое увеличение и уменьшение амплитуды колебаний маятников~--- биения;
 \begin{equation}
-\omega_{\text{б}} = \omega_2 - \omega_1 \approx \dfrac{B_1}{B} \sqrt{\dfrac{p_m B}{\mathfrak{I}}}
+\omega_b = \omega_2 - \omega_1 \approx \dfrac{B_1}{B} \sqrt{\dfrac{p_m B}{\mathfrak{I}}}.
 \end{equation}
 
-Тогда $T_\text{б} = \dfrac{2\pi}{\omega_\text{б}}$ есть время, за которое происходит перекачка энергии.
-
-В первом приближении $B_1 \ll B$, то есть связь слабая. Тогда поле диполя на направлении, перпендикулярном оси: $B_1 = \mu_0 \dfrac{p_m}{r^3}$.  Тогда циклическая частота биений $$\omega_\text{б} = \dfrac{B_1}{B} \sqrt{\dfrac{p_m B}{\mathfrak{I}}} \sim \dfrac{1}{r^3}$$
-
-Однако в нашем случае положение стрелок сильно зависит от $\vec B_1$, поэтому нужно посчитать поле магнитной стрелки более строго.
+С учётом $B_1 \simeq \dfrac{\mu_0 p_m}{r^3}$ получаем в приближении слабой связи $\omega_b \propto r^{-3}$.
 
 \subsection{Поле магнитной стрелки при сильной связи}
 
