@@ -6,13 +6,14 @@
 \RequirePackage[T2A, T1]{fontenc}
 \RequirePackage[utf8]{inputenc}
 \RequirePackage[english, russian]{babel}
-\RequirePackage{iunits}
+\RequirePackage{inputx}
 
 % Беспредел
 \let\NOLIMITS\nolimits
 \let\nolimits\limits
 \let\displaylimits\limits
 % Математика
+\RequirePackage{iunits}
 \RequirePackage{amsmath}
 \RequirePackage{amsfonts}
 \RequirePackage{amssymb}
